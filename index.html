@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olivia Crane | Divorce Law • Compassionate Advocacy</title>
+    <!-- Font Awesome 6 (free) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, system-ui, -apple-system, sans-serif;
+            background-color: #faf8f6;
+            color: #2c2b2b;
+            line-height: 1.5;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* header / navigation */
+        .navbar {
+            background: #ffffff;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            border-bottom: 1px solid #f0e7de;
+        }
+
+        .nav-flex {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            font-size: 1.9rem;
+            font-weight: 300;
+            letter-spacing: 1px;
+            color: #4b3b2e;
+        }
+
+        .logo span {
+            font-weight: 600;
+            color: #a75d4d;
+            font-family: 'Times New Roman', serif;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            font-weight: 500;
+            color: #3f3a36;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: inherit;
+            font-size: 1.1rem;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: #b46b5b;
+        }
+
+        .cta-nav {
+            background: #a75d4d;
+            color: white !important;
+            padding: 8px 20px;
+            border-radius: 40px;
+            font-weight: 600;
+            box-shadow: 0 3px 8px rgba(167, 93, 77, 0.3);
+        }
+
+        .cta-nav:hover {
+            background: #8f4c3e;
+            color: white !important;
+        }
+
+        /* hero */
+        .hero {
+            padding: 60px 0 40px 0;
+            background: linear-gradient(145deg, #fffbf9 0%, #fff4ef 100%);
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .hero-badge {
+            background: #eedad2;
+            color: #5b3e33;
+            display: inline-block;
+            padding: 6px 18px;
+            border-radius: 40px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: 3.2rem;
+            font-weight: 400;
+            line-height: 1.2;
+            color: #2e2a27;
+        }
+
+        .hero h1 strong {
+            font-weight: 700;
+            color: #a75d4d;
+        }
+
+        .hero-subhead {
+            font-size: 1.3rem;
+            margin: 25px 0 20px;
+            color: #4e443e;
+            font-weight: 300;
+        }
+
+        .qualities-mini {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin: 32px 0;
+        }
+
+        .quality-mini-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.1rem;
+            background: rgba(255,255,255,0.6);
+            padding: 6px 16px 6px 10px;
+            border-radius: 50px;
+            backdrop-filter: blur(2px);
+            border: 1px solid #f0d9cf;
+        }
+
+        .quality-mini-item i {
+            color: #a75d4d;
+            font-size: 1.3rem;
+            width: 28px;
+        }
+
+        .hero-image {
+            background: url('https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80') center/cover no-repeat;
+            background-color: #e3d9d2; /* fallback */
+            min-height: 400px;
+            border-radius: 40px 40px 40px 40px;
+            box-shadow: 20px 20px 40px rgba(0,0,0,0.07);
+            border: 6px solid white;
+        }
+
+        /* intro / about */
+        .section {
+            padding: 70px 0;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 300;
+            margin-bottom: 20px;
+            color: #372e28;
+            border-left: 7px solid #a75d4d;
+            padding-left: 25px;
+        }
+
+        .section-title strong {
+            font-weight: 600;
+        }
+
+        .about-text {
+            font-size: 1.2rem;
+            max-width: 800px;
+            color: #423d38;
+            margin-bottom: 30px;
+        }
+
+        .lawyer-quote {
+            background: #f2e5df;
+            padding: 40px 50px;
+            border-radius: 70px 20px 70px 20px;
+            margin: 50px 0 20px;
+            font-style: italic;
+            font-size: 1.4rem;
+            font-weight: 300;
+            color: #3f3029;
+            box-shadow: 0 10px 20px rgba(158, 116, 102, 0.1);
+        }
+
+        .lawyer-quote i {
+            color: #a75d4d;
+            margin-right: 12px;
+        }
+
+        /* qualities grid */
+        .qualities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 30px;
+            margin: 50px 0 30px;
+        }
+
+        .quality-card {
+            background: white;
+            padding: 35px 25px 25px 25px;
+            border-radius: 35px;
+            box-shadow: 0 15px 30px -8px rgba(90, 60, 50, 0.1);
+            transition: all 0.2s ease;
+            border: 1px solid #f3e2d9;
+            text-align: center;
+        }
+
+        .quality-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 35px -10px #ab7f6e70;
+            border-color: #cfb3a6;
+        }
+
+        .quality-icon {
+            background: #f4eae5;
+            width: 80px;
+            height: 80px;
+            line-height: 80px !important;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            color: #a75d4d;
+            font-size: 2.3rem;
+        }
+
+        .quality-card h3 {
+            font-size: 1.8rem;
+            font-weight: 400;
+            margin-bottom: 15px;
+            color: #4e352b;
+        }
+
+        .quality-card p {
+            color: #5f554e;
+        }
+
+        /* expertise & lawsuits */
+        .expertise-area {
+            background: #ffffff;
+            border-radius: 50px;
+            padding: 45px 40px;
+            margin: 40px 0;
+            box-shadow: 0 20px 35px #f0ded6;
+        }
+
+        .lawsuit-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px 40px;
+            margin-top: 30px;
+        }
+
+        .lawsuit-item {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            font-size: 1.2rem;
+            background: #fcf6f2;
+            padding: 12px 25px 12px 20px;
+            border-radius: 60px;
+            border: 1px solid #edd9cf;
+        }
+
+        .lawsuit-item i {
+            color: #a75d4d;
+            font-size: 1.8rem;
+            min-width: 40px;
+        }
+
+        .testimonial {
+            background: #342b26;
+            color: #f1e9e4;
+            padding: 60px 50px;
+            border-radius: 100px 20px 100px 20px;
+            margin: 70px 0;
+        }
+
+        .testimonial p {
+            font-size: 1.7rem;
+            font-weight: 300;
+            line-height: 1.5;
+            max-width: 900px;
+            margin-bottom: 30px;
+        }
+
+        .testimonial-author {
+            font-size: 1.2rem;
+            letter-spacing: 1px;
+            color: #e2cbc1;
+        }
+
+        .testimonial-author span {
+            background: #a75d4d;
+            padding: 4px 14px;
+            border-radius: 40px;
+            color: white;
+            font-weight: 600;
+            margin-left: 15px;
+        }
+
+        /* contact / footer */
+        .contact-bar {
+            background: #a75d4d;
+            color: white;
+            padding: 35px 0;
+            text-align: center;
+            border-radius: 60px 60px 0 0;
+            margin-top: 50px;
+        }
+
+        .contact-flex {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            font-size: 1.4rem;
+        }
+
+        .contact-flex i {
+            margin-right: 10px;
+            background: rgba(255,255,255,0.2);
+            padding: 12px;
+            border-radius: 50%;
+        }
+
+        .contact-flex a {
+            color: white;
+            text-decoration: none;
+            border-bottom: 2px solid rgba(255,255,255,0.4);
+        }
+
+        .footer-bottom {
+            background: #342b26;
+            color: #b9aaa2;
+            padding: 25px 0;
+            font-size: 1rem;
+            text-align: center;
+        }
+
+        @media (max-width: 800px) {
+            .hero-grid {
+                grid-template-columns: 1fr;
+            }
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+            .nav-flex {
+                flex-direction: column;
+                gap: 20px;
+            }
+            .lawsuit-list {
+                grid-template-columns: 1fr;
+            }
+        }
+        @media (max-width: 500px) {
+            .qualities-mini {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container nav-flex">
+            <div class="logo">crane<span>law</span></div>
+            <div class="nav-links">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Family law</a>
+                <a href="#">Contact</a>
+                <a href="#" class="cta-nav">free consult</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- hero -->
+        <section class="hero">
+            <div class="container hero-grid">
+                <div>
+                    <span class="hero-badge"><i class="fas fa-gavel" style="margin-right: 8px;"></i>family & divorce attorney</span>
+                    <h1>Divorce doesn’t define you. <strong>How you move forward</strong> does.</h1>
+                    <p class="hero-subhead">I’m Olivia Crane — trusted divorce lawyer, negotiator, and advocate for your new beginning.</p>
+                    
+                    <!-- mini qualities teaser -->
+                    <div class="qualities-mini">
+                        <div class="quality-mini-item"><i class="fas fa-heart"></i> Compassionate</div>
+                        <div class="quality-mini-item"><i class="fas fa-shield-alt"></i> Tenacious</div>
+                        <div class="quality-mini-item"><i class="fas fa-hand-holding-heart"></i> Supportive</div>
+                        <div class="quality-mini-item"><i class="fas fa-balance-scale"></i> Strategic</div>
+                    </div>
+
+                    <a href="#" style="display: inline-block; background: #a75d4d; color: white; padding: 16px 42px; border-radius: 50px; font-weight: 600; font-size: 1.2rem; margin-top: 20px; text-decoration: none; box-shadow: 0 4px 14px #a75d4d80;"><i class="fas fa-calendar-check" style="margin-right: 8px;"></i>Arrange a private meeting</a>
+                </div>
+                <div class="hero-image" aria-label="Lawyer Olivia Crane sitting in a bright office, confident and warm"></div>
+            </div>
+        </section>
+
+        <!-- introduction & personal message -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title"><strong>Olivia Crane</strong> — your advocate</h2>
+                <div class="about-text">
+                    <p>I know that divorce is more than a legal process: it’s emotional, financial, and personal. My practice combines sharp legal strategy with genuine human understanding. For over a decade I’ve guided clients through the complexity of divorce law — with integrity, discretion, and strength.</p>
+                </div>
+
+                <!-- lawyer quote block -->
+                <div class="lawyer-quote">
+                    <i class="fas fa-quote-left fa-2x"></i> I don’t just represent you in court; I stand beside you in life. My job is to protect what matters most — your children, your assets, and your peace of mind.
+                </div>
+            </div>
+        </section>
+
+        <!-- qualities core section (advertising her work qualities) -->
+        <section class="section" style="padding-top: 0;">
+            <div class="container">
+                <h2 class="section-title">qualities that set me apart</h2>
+                <div class="qualities-grid">
+                    <div class="quality-card">
+                        <div class="quality-icon"><i class="fas fa-ear-listen"></i></div>
+                        <h3>Deep listening</h3>
+                        <p>I hear what you say — and what you don’t. Every story shapes a unique legal approach.</p>
+                    </div>
+                    <div class="quality-card">
+                        <div class="quality-icon"><i class="fas fa-fist-raised"></i></div>
+                        <h3>fierce but fair</h3>
+                        <p>I fight for your rights while always looking for constructive, respectful resolutions.</p>
+                    </div>
+                    <div class="quality-card">
+                        <div class="quality-icon"><i class="fas fa-brain"></i></div>
+                        <h3>sharp strategy</h3>
+                        <p>From asset division to custody, I craft strategies that stand up in court or at the mediation table.</p>
+                    </div>
+                    <div class="quality-card">
+                        <div class="quality-icon"><i class="fas fa-feather-alt"></i></div>
+                        <h3>calm clarity</h3>
+                        <p>I translate complex legal jargon into clear steps, so you feel empowered, not overwhelmed.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- everything concerning divorce lawsuits (detailed) -->
+        <section class="container expertise-area">
+            <h2 style="font-size: 2.2rem; font-weight: 300; margin-bottom: 20px;"><strong>everything</strong> concerning divorce lawsuits</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 20px; color: #4f423b;">I handle every aspect of divorce and family law with precision and care:</p>
+            <div class="lawsuit-list">
+                <div class="lawsuit-item"><i class="fas fa-users-slash"></i> Separation & divorce</div>
+                <div class="lawsuit-item"><i class="fas fa-child"></i> Child custody & parenting plans</div>
+                <div class="lawsuit-item"><i class="fas fa-coins"></i> Spousal & child support</div>
+                <div class="lawsuit-item"><i class="fas fa-home"></i> Property & debt division</div>
+                <div class="lawsuit-item"><i class="fas fa-file-signature"></i> Prenuptial & postnuptial agreements</div>
+                <div class="lawsuit-item"><i class="fas fa-hand-holding-heart"></i> Mediation & collaborative divorce</div>
+                <div class="lawsuit-item"><i class="fas fa-gavel"></i> High‑conflict litigation</div>
+                <div class="lawsuit-item"><i class="fas fa-heart-broken"></i> Annulment & separation agreements</div>
+            </div>
+            <p style="margin-top: 40px; font-size: 1.2rem;"><i class="fas fa-check-circle" style="color:#a75d4d;"></i> No matter the complexity, I provide relentless, warm representation.</p>
+        </section>
+
+        <!-- testimonial / social proof -->
+        <div class="container">
+            <div class="testimonial">
+                <p>“ Olivia handled my divorce with such grace and strength. She understood my concerns about the kids and made sure we reached a fair settlement without going to war. I felt protected, heard, and respected. ”</p>
+                <div class="testimonial-author">— Sarah M.<span>client for 3 years</span></div>
+            </div>
+        </div>
+
+        <!-- why choose her (extra trust) -->
+        <section class="section" style="background: #f8efea; border-radius: 120px 0 120px 0; margin: 40px 24px; padding: 60px 24px;">
+            <div class="container" style="text-align: center;">
+                <i class="fas fa-scale-balanced" style="font-size: 3rem; color: #a75d4d; margin-bottom: 20px;"></i>
+                <h2 style="font-size: 2.5rem; font-weight: 300;">more than a lawyer — a partner</h2>
+                <p style="max-width: 700px; margin: 25px auto; font-size: 1.3rem;">Certified family law specialist • 15+ years experience • 98% of cases resolved without trial • but ready for everything.</p>
+                <div style="display: flex; gap: 30px; justify-content: center; flex-wrap: wrap; margin: 45px 0 15px;">
+                    <span><i class="fas fa-star" style="color: #b3705d;"></i> Top 5% attorneys (2024)</span>
+                    <span><i class="fas fa-star" style="color: #b3705d;"></i> SuperLawyers</span>
+                    <span><i class="fas fa-star" style="color: #b3705d;"></i> 10/10 Avvo rating</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- contact / call to action -->
+        <div class="contact-bar">
+            <div class="container">
+                <h3 style="font-size: 2rem; font-weight: 300; margin-bottom: 20px;">Let’s talk — no pressure, just clarity</h3>
+                <div class="contact-flex">
+                    <span><i class="fas fa-phone-alt"></i> (212) 555 0198</span>
+                    <span><i class="fas fa-envelope"></i> <a href="mailto:olivia@crane.law">olivia@crane.law</a></span>
+                    <span><i class="fas fa-map-pin"></i> 200 central park west, nyc</span>
+                </div>
+                <div style="margin-top: 40px;">
+                    <a href="#" style="color: #342b26; background: white; padding: 14px 45px; border-radius: 60px; text-decoration: none; font-weight: 700; font-size: 1.2rem;"><i class="fas fa-comment-dots"></i> schedule a discovery call</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer-bottom">
+        <div class="container">
+            <p>© 2025 Crane Law — divorce & family advocacy. All rights reserved.  <span style="margin:0 15px;">|</span>  <i class="fas fa-gavel"></i>  every new chapter starts with a wise decision.</p>
+        </div>
+    </footer>
+</body>
+</html>
+
+
+
